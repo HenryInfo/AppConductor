@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="pe.bravos.taxis.fragment.principal">
+
+    <item
+        android:id="@+id/navCerrarApp"
+        android:icon="@mipmap/ic_close"
+        android:title="Cancelar reserva"
+        app:showAsAction="ifRoom" />
+</menu>

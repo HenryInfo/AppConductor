@@ -1,0 +1,256 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="fill_parent"
+    android:layout_height="fill_parent" >
+
+    <FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/parent"
+        tools:context=".MapsActivity" >
+        <fragment xmlns:android="http://schemas.android.com/apk/res/android"
+        xmlns:map="http://schemas.android.com/apk/res-auto"
+        xmlns:tools="http://schemas.android.com/tools"
+        android:id="@+id/map"
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        tools:context="com.taxipluscajamarca.appconductor.MapsActivity" />
+
+    </FrameLayout>
+    <!-- Button Buscar Calle-->
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:background="@drawable/redondeado"
+        android:layout_marginStart="50dp"
+        android:layout_alignParentTop="true"
+        android:id="@+id/ParteSuperior">
+
+        <Button
+            android:layout_width="50dp"
+            android:layout_height="wrap_content"
+            android:background="@drawable/ic_action_name"
+            android:id="@+id/btnBuscar"/>
+
+        <EditText
+            android:layout_width="150dp"
+            android:minWidth="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/editText"
+            android:visibility="gone"
+            />
+    </LinearLayout>
+    <!-- Button Navegar -->
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentTop="true"
+        android:layout_toRightOf="@+id/ParteSuperior"
+        android:id="@+id/ParteSupDere">
+        <ImageButton
+            android:layout_width="50dp"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:background="@drawable/redondeado"
+            android:src="@mipmap/ic_navegation"
+            android:id="@+id/btnNavegar"/>
+    </LinearLayout>
+    <!-- Button Cambiar estado -->
+
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginBottom="130dp"
+        android:id="@+id/LayoutEstados">
+        <ImageButton
+            android:layout_width="wrap_content"
+            android:visibility="visible"
+            android:layout_height="wrap_content"
+            android:background="@drawable/redondeado"
+            android:src="@drawable/success"
+            android:id="@+id/btnCambiarEstado"/>
+    </LinearLayout>
+    <!-- arribó nuevo pedido-->
+    <LinearLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_alignParentBottom="true"
+        android:visibility="gone"
+        android:layout_marginEnd="40dp"
+        android:id="@+id/SolicitudOpciones">
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:background="@drawable/buttoncolor"
+            android:id="@+id/btnRechazar"
+            android:visibility="gone"
+            android:textColor="#fff"
+            android:text="Rechazar"/>
+        <Button
+            android:layout_width="0dp"
+            android:textColor="#fff"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:visibility="gone"
+            android:background="@drawable/buttonaceptar"
+            android:id="@+id/btnAceptar"
+            android:text="Aceptar"/>
+    </LinearLayout>
+
+    <!-- pedido aceptado-->
+    <LinearLayout
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:visibility="invisible"
+        android:layout_marginEnd="40dp"
+        android:layout_alignParentBottom="true"
+        android:id="@+id/SolicitudActualOptiones">
+
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="4"
+            android:visibility="gone"
+            android:textColor="#fff"
+            android:background="@drawable/buttoncolor"
+            android:id="@+id/btnCancelar"
+            android:text="Cancelar"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="6"
+            android:textColor="#fff"
+            android:visibility="gone"
+            android:id="@+id/btnLlegue"
+            android:background="@drawable/buttonallegue"
+            android:text="Llegué"/>
+        <Button
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="10"
+            android:textColor="#fff"
+            android:visibility="gone"
+            android:id="@+id/btnTermine"
+            android:background="@drawable/buttonaceptar"
+            android:text="Terminé"/>
+
+
+    </LinearLayout>
+
+    <!-- boton Notificacion-->
+    <LinearLayout
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center"
+        android:layout_marginTop="10dp"
+        android:id="@+id/ParteAlertaPedido"
+        android:layout_below="@+id/ParteSuperior">
+        <ImageButton
+            android:layout_width="50dp"
+            android:layout_height="40dp"
+            android:visibility="invisible"
+            android:background="@drawable/buttonnoti"
+            android:src="@mipmap/ic_show"
+            android:id="@+id/btnShowNotificacion"/>
+
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/dialog"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#a2ffffff"
+        android:orientation="horizontal"
+        android:visibility="gone"
+        android:layout_below="@+id/ParteAlertaPedido">
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_marginStart="10dp"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                android:text="DIRECCION:"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="8"
+                android:layout_marginStart="10dp"
+                android:gravity="center"
+                android:id="@+id/txtSolicitudDireccion"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Large"
+                android:text="Esperando dirección..."/>
+        </LinearLayout>
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:layout_weight="2"
+            android:background="@drawable/border"
+            android:orientation="vertical">
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:text="Cliente:"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:id="@+id/txtSolicitudCliente"
+                android:text="Esperando cliente"/>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingTop="2dp"
+                android:layout_height="wrap_content"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium"
+                android:text="Telefono:"/>
+            <TextView
+                android:layout_width="match_parent"
+                android:paddingTop="2dp"
+                android:id="@+id/txtSolicitudTelefono"
+                android:layout_height="wrap_content"/>
+
+            <ImageButton
+                android:layout_width="match_parent"
+                android:background="@drawable/buttonnoti"
+                android:src="@mipmap/ic_call"
+                android:layout_marginTop="30dp"
+                android:layout_marginEnd="10dp"
+                android:layout_marginStart="10dp"
+                android:onClick="llamarcliente"
+                android:id="@+id/btnSolicitudLlamar"
+                android:layout_height="wrap_content"
+                android:contentDescription="Llamar Cliente" />
+
+        </LinearLayout>
+        <ImageButton
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="@drawable/buttonnoti"
+            android:src="@mipmap/ic_back"
+            android:id="@+id/btnHideDialog"
+            android:layout_weight=".5"/>
+    </LinearLayout>
+
+</RelativeLayout>

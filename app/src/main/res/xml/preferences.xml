@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="utf-8"?>
+<PreferenceScreen xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <PreferenceCategory
+        android:title="Datos de Cchofer y Movilidad" >
+
+        <EditTextPreference
+            android:key="pIdChofer"
+            android:title="IdChofer"
+            android:summary="Identifica al usuario de la aplicación"
+            android:dialogTitle="Ingrese su Identificador" />
+
+        <EditTextPreference
+            android:key="pIdMovilidad"
+            android:title="Id Chofer"
+            android:summary="Identifica a la movilidad del chofer"
+            android:dialogTitle="Ingrese "/>
+
+        <EditTextPreference
+            android:key="pNPlaca"
+            android:title="Numero Placa"
+            android:summary="Identifica a la movilidad"
+            android:dialogTitle="Placa "/>
+
+        <EditTextPreference
+            android:key="pNumeroInterno"
+            android:title="Numero Interno"
+            android:summary="Numero Interno"
+            android:dialogTitle="Numero interno "/>
+
+        <EditTextPreference
+            android:key="pPassword"
+            android:title="Numero Interno"
+            android:summary="Numero Interno"
+            android:dialogTitle="Pass "/>
+
+        <EditTextPreference
+            android:key="pIdSolicitud"
+            android:title="Numero de solictud"
+            android:summary="Numero de solicutd"
+            android:dialogTitle="Asingado "/>
+
+    </PreferenceCategory>
+
+</PreferenceScreen>
